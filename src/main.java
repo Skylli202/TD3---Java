@@ -1,9 +1,17 @@
+/**
+ * 
+ */
 
+/**
+ * @author Elouan
+ *
+ */
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Ex1();
+		//Ex1();
+		//Ex2();
 	}
 	
 	static void Ex1() {
@@ -35,5 +43,14 @@ public class main {
 		// Testons de set code à une valeur ne satisfesant pas la condition alphanumérique
 		c2.setCode("a#a");
 		
+	}
+	
+	static void Ex2() {
+		Formation IT_3A;
+		IT_3A = new Formation("ITC3A", "Infotronique");
+		
+		IT_3A.autoFill();
+		
+		System.out.println(IT_3A.toString());
 	}
 }

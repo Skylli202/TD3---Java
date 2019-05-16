@@ -1,3 +1,11 @@
+/**
+ * 
+ */
+
+/**
+ * @author Elouan
+ *
+ */
 import java.util.Scanner;
 
 public class Cours {
@@ -53,7 +61,7 @@ public class Cours {
 	}
 	
 	// Verification Alphanumerique
-	public boolean isAlphaNum(String str) {
+	public static boolean isAlphaNum(String str) {
 		int length = str.length();
 		
 		for(int i=0; i < length; i++) {
