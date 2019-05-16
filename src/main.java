@@ -12,6 +12,8 @@ public class main {
 		// TODO Auto-generated method stub
 		//Ex1();
 		//Ex2();
+		//Ex3();
+		Ex4();
 	}
 	
 	static void Ex1() {
@@ -52,5 +54,61 @@ public class main {
 		IT_3A.autoFill();
 		
 		System.out.println(IT_3A.toString());
+	}
+	
+	static void Ex3() {
+		// Création des 7 cours
+		Cours info2 = new Cours("ITC315", 66, "Informatique2");
+		Cours elecNum = new Cours("ITC316", 66, "Electronique Numerique");
+		
+		Cours OndePropag = new Cours("ITC317", 66, "Ondes et Propagation");
+		Cours ccna = new Cours("ITC318", 48, "Certification CCNA");
+		
+		Cours tsi = new Cours("ITC319", 66, "Traitement du Signal et des Images");
+		Cours projet = new Cours("ITPC32", 35, "Projet");
+		
+		// ANGLAIS2 et non ANGLAIS 2 car la gestion des espaces n'est pas handled
+		Cours anglais = new Cours("ANGLAIS2", 35, "Anglais");
+		
+		// Création de la Formation
+		Formation IT = new Formation("IT3A", "Infotronique");
+		
+		// Ajouts des 7 Cours à la Formation
+		IT.addCours(info2);
+		IT.addCours(elecNum);
+		IT.addCours(OndePropag);
+		IT.addCours(ccna);
+		IT.addCours(tsi);
+		IT.addCours(projet);
+		IT.addCours(anglais);
+		
+		//Affichage
+		System.out.println("\n" + IT.toString());
+		
+		// Suppression du 2ème Cours de la liste
+		IT.removeCours(1);
+		
+		//Ré-Affichage
+		System.out.println("\n" + IT.toString());
+		
+		//Affichage du 2eme Cours de la Formation
+		System.out.println("Le nouveau deuxième Cours de la liste est : " +IT.getCours(1).toString() + ".");
+	}
+	
+	static void Ex4() {
+		Cours info2 = new Cours("ITC315", 66, "Informatique2");
+		Cours elecNum = new Cours("ITC316", 66, "Electronique Numerique");
+		
+		/* Rappel
+		 * 	 - true = 1
+		 *   - false = 0
+		 */
+		System.out.println("true = 1 | false = 0");
+		
+		// Should be false
+		System.out.println("info2 est-il identique à elecNum : " + info2.compareTo(elecNum));
+		
+		// Should be true
+		System.out.println("info2 est-il identique à info2 : " + info2.compareTo(info2));
 	}
 }

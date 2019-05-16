@@ -48,4 +48,25 @@ public class Formation {
 		
 		return res;
 	}
+	
+	//add
+	public void addCours(Cours c) {
+		System.out.println(c.toString() + " bien ajouté à la formation " + this.nom + " [" + this.code + "]");
+		this.list.add(c);
+	}
+	
+	//remove
+	public void removeCours(int i) {
+		System.out.println("Le Cours à l'indice " + i + " a bien été retiré de la formation " + this.nom + " [" + this.code + "]");
+		this.list.remove(i);
+	}
+	public void removeCours(Cours c) {
+		System.out.println("Le Cours " + c.toString() + " bien été retiré de la formation " + this.nom + " [" + this.code + "]");
+		this.list.remove(c);
+	}
+	
+	//get
+	public Cours getCours(int i) {
+		return this.list.get(i);
+	}
 }
