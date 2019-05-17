@@ -73,22 +73,24 @@ public class Cours implements Comparable {
 		return true;
 	}
 
-	public int compareTo(Cours c) {
-		// TODO Auto-generated method stub
-		// Rappel : true = 1  false = 0
-		
-		if(this.code != c.code
-				|| this.volHoraire != c.volHoraire
-				|| this.intitule != c.intitule)
-			return 0;
-		
-		return 1;
-	}
+//	public int compareTo(Cours c) {
+//		// TODO Auto-generated method stub
+//		// Rappel : true = 1  false = 0
+//		
+//		if(this.code != c.code
+//				|| this.volHoraire != c.volHoraire
+//				|| this.intitule != c.intitule)
+//			return 0;
+//		
+//		return 1;
+//	}
 
 	@Override
 	public int compareTo(Object o) {
 		//Tous Object n'était pas un Cours est forcément différent d'un Cours.
 		// TODO Auto-generated method stub
-		return 0;
+		String intitule = ((Cours)o).getIntitule();
+		
+		return this.intitule.compareTo(intitule);
 	}
 }

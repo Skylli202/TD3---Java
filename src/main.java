@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 /**
  * 
  */
@@ -110,5 +112,12 @@ public class main {
 		
 		// Should be true
 		System.out.println("info2 est-il identique à info2 : " + info2.compareTo(info2));
+		
+		// Sort
+		Formation IT = new Formation("IT3A", "Infotronique");
+		IT.autoFill();
+		System.out.println(IT.toString());
+		Collections.sort(IT.getList());
+		System.out.println(IT.toString());
 	}
 }

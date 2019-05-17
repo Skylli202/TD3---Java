@@ -24,6 +24,13 @@ public class Formation {
 		this.nom = nom;
 	}
 	
+	// Getter
+	public ArrayList getList() {
+		return this.list;
+	}
+	
+	// Setter
+	
 	// Auto remplissage
 	public void autoFill() {
 		this.list.add(new Cours("ITC315", 66, "Informatique2"));
